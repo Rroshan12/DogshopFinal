@@ -49,10 +49,12 @@ function Login() {
 <button className="btn"   >{currentUser? history.push("/"): ''}signin</button> 
          
          
-            <button  className="btn" onClick={signInWithGoogle}> {currentUser? history.push("/"): ''} Google Signin</button>
+         
 
             
             </form>
+
+            <button  className="btn" onClick={signInWithGoogle}> {currentUser? history.push("/"): ''} Google Signin</button>
           
         </div>
     )
