@@ -44,6 +44,7 @@ function Checkout() {
             email:'',
             phonenumber:''
         });
+        window.location.reload(true);
     
     });
 
