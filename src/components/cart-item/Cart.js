@@ -38,7 +38,7 @@ function Cart() {
           }
 
           {
-              cartitem.length >0 ? <button  onClick={()=> history.push(currentUser ? "/checkout":"/login")  }>checkout</button>:''
+              cartitem.length >0 ? <button  onClick={()=> history.push(currentUser ? "/checkout":"/register")  }>checkout</button>:''
           }
                 
           
