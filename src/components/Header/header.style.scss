@@ -1,0 +1,38 @@
+.header {
+  height: 4.5rem;
+  box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  margin: 0px;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    min-width: 300px;
+  }
+
+  .media {
+    padding: 5px;
+    height: 4 rem;
+    .media-item {
+      height: 3.5rem;
+      width: 3.5rem;
+    }
+  }
+  .navs {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+
+    padding: 15px;
+    align-items: center;
+    text-decoration: none;
+
+    li {
+      list-style-type: none;
+    }
+    .link {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

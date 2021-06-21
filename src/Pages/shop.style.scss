@@ -1,0 +1,31 @@
+.scafold {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  .filter {
+    width: 20%;
+    height: 300px;
+
+    margin: 10px;
+  }
+  .product {
+    width: 70%;
+    margin: 10px;
+  }
+  .sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+    .addProduct {
+      width: 90%;
+      height: 300px;
+      margin: 15px;
+    }
+    .cart-item {
+      width: 90%;
+      margin: 10px;
+    }
+  }
+}
