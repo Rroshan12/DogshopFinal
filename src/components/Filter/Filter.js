@@ -1,4 +1,5 @@
 import React from 'react'
+import './filter.style.scss'
 
 function Filter({changeWord}) {
     return (

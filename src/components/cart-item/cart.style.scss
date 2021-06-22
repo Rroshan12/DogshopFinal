@@ -21,6 +21,26 @@
       width: 60px;
       height: 30px;
       text-align: center;
+      cursor: pointer;
+      background-color: black;
+      color: white;
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+
+  .btn1 {
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+
+    &:hover {
+      background-color: white;
+      color: black;
     }
   }
 }
