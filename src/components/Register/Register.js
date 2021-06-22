@@ -19,9 +19,14 @@ function Register() {
    const  handelSubmit=async e =>{
         e.preventDefault();
         const {displayName,email,password,confirmPassword}=userdata;
-        if(password!== confirmPassword){
-            alert("password not matched");
+        if(password!== confirmPassword ){
+            alert("password not matched ");
             return
+        }
+        if( password.length < 6){
+            alert("password should be greter that 6 character ");
+            return
+
         }
 
         try{

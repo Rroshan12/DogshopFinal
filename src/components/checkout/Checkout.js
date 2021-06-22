@@ -22,34 +22,48 @@ function Checkout() {
   
 
  const handelSubmit = async (e)=>{
+    
+     e.preventDefault();
+     const {name,email,phonenumber}=order;
+
+     if(name === '' || email === '' || phonenumber === ''){
+        alert("please fill in detain")
+        return
+     }
+   
 
     {
         cartitem.map(item=>(
             productid.push(item.ProductID)
         ))
     }
-    console.log(productid);
-
-       e.preventDefault();
-       await  firestore.collection('Orders').add({
-        Name: order.name,
-        Email: order.email,
-        Phonenumber: Number(order.phonenumber),
-        ProductId:productid,
-        TotalPrice: totalmoney,
-        Deliver:false
-    }).then(() => {
-        setOrder({
-            name:'',
-            email:'',
-            phonenumber:''
+ 
+        await  firestore.collection('Orders').add({
+            Name: order.name,
+            Email: order.email,
+            Phonenumber: Number(order.phonenumber),
+            ProductId:productid,
+            TotalPrice: totalmoney,
+            Deliver:false
+        }).then(() => {
+            setOrder({
+                name:'',
+                email:'',
+                phonenumber:''
+            });
+           
+            alert("your order is placed")
+            
+           history.push("/")
+        
         });
-        window.location.reload(true);
-    
-    });
+       
+  
 
-    alert("your order is placed")
-    history.push("/")
+    
+       
+
+    
 
     }
    

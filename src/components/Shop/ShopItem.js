@@ -44,7 +44,7 @@ function ShopItem({search,user}) {
     return null;
   }
 
-}).map(product => (
+}).map((product) => (
                     <div className='product-card' key={product.ProductID}>
                         <div className='product-img'>
                             <img src={product.ProductImg} alt="not found" />

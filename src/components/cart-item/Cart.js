@@ -3,7 +3,6 @@ import {useSelector} from "react-redux"
 import './cart.style.scss'
 import {useDispatch} from 'react-redux'
 import { removeFromCart } from '../../actions/cart'
-import Button from '../Button/Button'
 import {useHistory} from 'react-router-dom'
 
 function Cart() {
@@ -15,7 +14,7 @@ function Cart() {
     return (
         <div className="scafoldcart">
           {
-              cartitem.map(item=>(
+              cartitem.map((item,index)=>(
                 
               <div className="wrap">
                 <img  className="image" src={item.ProductImg}/>
@@ -24,7 +23,7 @@ function Cart() {
                 style: "currency",
                 currency: "USD"
               })}</span>
-                <button  className="btn1" type="submit" onClick={()=> dispatch(removeFromCart(item.ProductId))}>Delete</button>
+                <button  className="btn1" type="submit" onClick={(e)=> dispatch(removeFromCart(index))}>Delete</button>
             
 
 

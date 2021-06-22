@@ -1,10 +1,17 @@
 import React ,{useContext}from 'react'
 import { OrdersContext } from '../../context/order.context';
 import './order.style.scss'
-import firebase ,{firestore }from '../../firebase/config';
+import {firestore }from '../../firebase/config';
 import { ProductsContext } from '../../context/product.context';
 
 function Order({user}) {
+
+  const {orders}  = useContext(OrdersContext);
+  const {products} = useContext(ProductsContext)
+
+
+
+
 
     function writeData(OrderID,DeliveryStatus) {
         firestore.collection('Orders').doc(OrderID).update({Deliver: !DeliveryStatus}).then(()=>{
@@ -13,8 +20,6 @@ function Order({user}) {
         
       }
 
-    const {orders}  = useContext(OrdersContext);
-    const {products} = useContext(ProductsContext)
 
     
 

@@ -5,7 +5,7 @@ const carts = (carts=[],action)=>{
       return [...carts, action.payload];
     case "REMOVE":
       const newArr = [...carts];
-      newArr.splice(action.index, 1);
+      newArr.splice(action.payload, 1);
       return newArr;
     default:
        return carts;
